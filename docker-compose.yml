@@ -1,0 +1,11 @@
+services:
+  node:
+    image: node:24-alpine
+    volumes:
+      - .:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+    working_dir: /usr/src/app
+    tty: true
+
+volumes:
+  node_modules:

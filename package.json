@@ -1,0 +1,43 @@
+{
+  "name": "@sfidanza/netherforge",
+  "version": "0.0.1",
+  "author": "Stéphane Fidanza <stephane.fidanza@gmail.com>",
+  "description": "Collection of esbuild plugins to power great apps.",
+  "homepage": "https://github.com/sfidanza/netherforge",
+  "bugs": {
+    "url": "https://github.com/sfidanza/netherforge/issues"
+  },
+  "dependencies": {
+    "chokidar": "5.x",
+    "del": "8.x",
+    "eslint": "10.x",
+    "fast-glob": "3.x",
+    "stylelint": "17.x"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@stylistic/eslint-plugin": "5.10.0",
+    "globals": "17.12.0"
+  },
+  "peerDependencies": {
+    "esbuild": "0.28.x"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node --test"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfidanza/netherforge.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "lightweight",
+    "framework",
+    "template"
+  ]
+}
