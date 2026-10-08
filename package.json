@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "chokidar": "5.x",
-    "del": "8.x",
+    "del": "9.x",
     "eslint": "10.x",
     "fast-glob": "3.x",
     "stylelint": "17.x"
