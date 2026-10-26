@@ -24,7 +24,7 @@ export const worldWatcher = {
 			// await ctx.watch();
 
 			console.log(LCINFO, '[watch] build finished, watching for changes...');
-			chokidar.watch('./src', { ignoreInitial: true, usePolling: true }).on('all', async (event, path) => {
+			chokidar.watch('./src', { backend: 'polling', ignoreInitial: true }).on('all', async (event, path) => {
 				console.log(LCWARN, event, path);
 				try {
 					await ctx.rebuild();
