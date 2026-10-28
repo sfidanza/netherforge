@@ -1,6 +1,6 @@
 services:
   node:
-    image: node:24-alpine
+    image: node:26-alpine
     volumes:
       - .:/usr/src/app
       - node_modules:/usr/src/app/node_modules
