@@ -18,7 +18,7 @@
     "esbuild": "0.28.x",
     "eslint": "10.x",
     "fast-glob": "3.x",
-    "stylelint": "17.x"
+    "stylelint": "17 - 18"
   },
   "scripts": {
     "lint": "eslint .",
