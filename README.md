@@ -14,7 +14,6 @@ Collection of esbuild plugins to power great apps.
 Here is a sample `esbuild.config.js` to illustrate all the tools:
 
 ```js
-import * as esbuild from 'esbuild';
 import { clean, hash, eslint, stylelint, tpl, worldWatcher } from '@sfidanza/netherforge';
 
 const config = {
@@ -42,7 +41,7 @@ const config = {
     ]
 };
 
-worldWatcher.oversee(esbuild, config); // builds, plus watches if --watch is passed as command argument
+worldWatcher.oversee(config); // builds, plus watches if --watch is passed as command argument
 ```
 
 Trigger build/watch mode through:

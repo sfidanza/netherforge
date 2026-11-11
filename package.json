@@ -7,20 +7,18 @@
   "bugs": {
     "url": "https://github.com/sfidanza/netherforge/issues"
   },
-  "dependencies": {
-    "chokidar": "6.x",
-    "del": "9.x",
-    "eslint": "10.x",
-    "fast-glob": "3.x",
-    "stylelint": "17.x"
-  },
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@stylistic/eslint-plugin": "5.10.0",
     "globals": "17.14.0"
   },
   "peerDependencies": {
-    "esbuild": "0.28.x"
+    "chokidar": "6.x",
+    "del": "9.x",
+    "esbuild": "0.28.x",
+    "eslint": "10.x",
+    "fast-glob": "3.x",
+    "stylelint": "17.x"
   },
   "scripts": {
     "lint": "eslint .",

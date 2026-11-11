@@ -1,12 +1,18 @@
 /* global process */
 
 import chokidar from 'chokidar';
+import * as esbuild from 'esbuild';
 
 const LCINFO = '\x1b[34m%s\x1b[0m'; //blue
 const LCWARN = '\x1b[33m%s\x1b[0m'; //yellow
 
+let watchDir = './src';
+
 export const worldWatcher = {
-	oversee: async function (esbuild, config) {
+	setRealm: function (src) {
+		watchDir = src;
+	},
+	oversee: async function (config) {
 		const isWatching = process.argv.includes('--watch');
 
 		try {
@@ -24,7 +30,7 @@ export const worldWatcher = {
 			// await ctx.watch();
 
 			console.log(LCINFO, '[watch] build finished, watching for changes...');
-			chokidar.watch('./src', { backend: 'polling', ignoreInitial: true }).on('all', async (event, path) => {
+			chokidar.watch(watchDir, { backend: 'polling', ignoreInitial: true }).on('all', async (event, path) => {
 				console.log(LCWARN, event, path);
 				try {
 					await ctx.rebuild();
